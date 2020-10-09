@@ -5,7 +5,7 @@ def c():
    mycursor = xyz.cursor()
    mycursor.execute("select * from clanguage")
    for i in mycursor:
-      print('\n')
+      print('\n>>>>>>>>><<<<<<<<<')
       print(i[0])
       print(i[1])
       print('(A) ' + i[2])
@@ -24,12 +24,12 @@ def c():
          score = score - 0.25
 
    print("\n>>>>>>>><<<<<<<<")
-   print('Final score=', score)
+   print('Final score=', score,'/10')
    if score <= 0:
       print("Final percentage : 0%")
       print(">>>>>>>><<<<<<<<")
    else:
-      v = (float(score)) * 100 / 5
+      v = (float(score)) * 100 / 10
       print("Final percentage : " + str(v) + "%")
       print(">>>>>>>><<<<<<<<")
 
@@ -40,8 +40,9 @@ def cplus():
     mycursor = xyz.cursor()
     mycursor.execute("select * from cplus")
     for i in mycursor:
-        print('\n')
+        print('\n>>>>>>>>><<<<<<<<<')
         print(i[0])
+
         print(i[1])
         print('(A) ' + i[2])
         print('(B) ' + i[3])
@@ -59,12 +60,12 @@ def cplus():
             score = score - 0.25
 
     print("\n>>>>>>>><<<<<<<<")
-    print('Final score=', score)
+    print('Final score=', score, '/10')
     if score <= 0:
         print("Final percentage : 0%")
         print(">>>>>>>><<<<<<<<")
     else:
-        v = (float(score)) * 100 / 5
+        v = (float(score)) * 100 / 10
         print("Final percentage : " + str(v) + "%")
         print(">>>>>>>><<<<<<<<")
 
@@ -75,7 +76,7 @@ def java():
     mycursor = xyz.cursor()
     mycursor.execute("select * from java")
     for i in mycursor:
-        print('\n')
+        print('\n>>>>>>>>><<<<<<<<<')
         print(i[0])
         print(i[1])
         print('(A) ' + i[2])
@@ -94,12 +95,12 @@ def java():
             score = score - 0.25
 
     print("\n>>>>>>>><<<<<<<<")
-    print('Final score=', score)
+    print('Final score=', score,'/10')
     if score <= 0:
         print("Final percentage : 0%")
         print(">>>>>>>><<<<<<<<")
     else:
-        v = (float(score)) * 100 / 5
+        v = (float(score)) * 100 / 10
         print("Final percentage : " + str(v) + "%")
         print(">>>>>>>><<<<<<<<")
 
@@ -151,7 +152,7 @@ def switch():
              print("This Project created by Kailash Prajapati & Savan Prajapati in 3rd semester.")
              con()
           elif n == 3:
-             print("if user pick right answer so user get 1 point sand if user pick Wrong answer so user lose 0.25 point.")
+             print("if user pick right answer so user get 1 point and if user pick Wrong answer so user lose 0.25 point.")
              con()
           elif n == 4:
              exit(1)
