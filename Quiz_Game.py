@@ -24,13 +24,15 @@ def c():
          score = score - 0.25
 
    print("\n>>>>>>>><<<<<<<<")
-   print('Final score=', score,'/10')
+   print('Final score=', score,'/15')
+
    if score <= 0:
       print("Final percentage : 0%")
       print(">>>>>>>><<<<<<<<")
    else:
-      v = (float(score)) * 100 / 10
-      print("Final percentage : " + str(v) + "%")
+      v = (float(score)) * 100 / 15
+      b=round(v,2)
+      print("Final percentage : " + str(b) + "%")
       print(">>>>>>>><<<<<<<<")
 
 def cplus():
@@ -60,13 +62,14 @@ def cplus():
             score = score - 0.25
 
     print("\n>>>>>>>><<<<<<<<")
-    print('Final score=', score, '/10')
+    print('Final score=', score, '/15')
     if score <= 0:
         print("Final percentage : 0%")
         print(">>>>>>>><<<<<<<<")
     else:
-        v = (float(score)) * 100 / 10
-        print("Final percentage : " + str(v) + "%")
+        v = (float(score)) * 100 / 15
+        b = round(v, 2)
+        print("Final percentage : " + str(b) + "%")
         print(">>>>>>>><<<<<<<<")
 
 def java():
@@ -95,15 +98,120 @@ def java():
             score = score - 0.25
 
     print("\n>>>>>>>><<<<<<<<")
-    print('Final score=', score,'/10')
+    print('Final score=', score,'/15')
     if score <= 0:
         print("Final percentage : 0%")
         print(">>>>>>>><<<<<<<<")
     else:
-        v = (float(score)) * 100 / 10
-        print("Final percentage : " + str(v) + "%")
+        v = (float(score)) * 100 / 15
+        b = round(v, 2)
+        print("Final percentage : " + str(b) + "%")
         print(">>>>>>>><<<<<<<<")
+def python():
+    score = 0
+    import mysql.connector
+    xyz = mysql.connector.connect(host="localhost", user="savan", passwd="savan4141", database="savan")
+    mycursor = xyz.cursor()
+    mycursor.execute("select * from python")
+    for i in mycursor:
+        print('\n>>>>>>>>><<<<<<<<<')
+        print(i[0])
+        print(i[1])
+        print('(A) ' + i[2])
+        print('(B) ' + i[3])
+        print('(C) ' + i[4])
+        print('(D) ' + i[5])
 
+        a = input("\nyour choice")
+
+        if a.capitalize() == i[6]:
+            print("correct answer")
+            score = score + 1
+        else:
+            print("Wrong answer")
+            print("Right Answer : " + i[7])
+            score = score - 0.25
+
+    print("\n>>>>>>>><<<<<<<<")
+    print('Final score=', score, '/15')
+    if score <= 0:
+        print("Final percentage : 0%")
+        print(">>>>>>>><<<<<<<<")
+    else:
+        v = (float(score)) * 100 / 15
+        b = round(v, 2)
+        print("Final percentage : " + str(b) + "%")
+        print(">>>>>>>><<<<<<<<")
+def php():
+    score = 0
+    import mysql.connector
+    xyz = mysql.connector.connect(host="localhost", user="savan", passwd="savan4141", database="savan")
+    mycursor = xyz.cursor()
+    mycursor.execute("select * from java")
+    for i in mycursor:
+        print('\n>>>>>>>>><<<<<<<<<')
+        print(i[0])
+        print(i[1])
+        print('(A) ' + i[2])
+        print('(B) ' + i[3])
+        print('(C) ' + i[4])
+        print('(D) ' + i[5])
+
+        a = input("\nyour choice")
+
+        if a.capitalize() == i[6]:
+            print("correct answer")
+            score = score + 1
+        else:
+            print("Wrong answer")
+            print("Right Answer : " + i[7])
+            score = score - 0.25
+
+    print("\n>>>>>>>><<<<<<<<")
+    print('Final score=', score, '/15')
+    if score <= 0:
+        print("Final percentage : 0%")
+        print(">>>>>>>><<<<<<<<")
+    else:
+        v = (float(score)) * 100 / 15
+        b = round(v, 2)
+        print("Final percentage : " + str(b) + "%")
+        print(">>>>>>>><<<<<<<<")
+def javascript():
+    score = 0
+    import mysql.connector
+    xyz = mysql.connector.connect(host="localhost", user="savan", passwd="savan4141", database="savan")
+    mycursor = xyz.cursor()
+    mycursor.execute("select * from java")
+    for i in mycursor:
+        print('\n>>>>>>>>><<<<<<<<<')
+        print(i[0])
+        print(i[1])
+        print('(A) ' + i[2])
+        print('(B) ' + i[3])
+        print('(C) ' + i[4])
+        print('(D) ' + i[5])
+
+        a = input("\nyour choice")
+
+        if a.capitalize() == i[6]:
+            print("correct answer")
+            score = score + 1
+        else:
+            print("Wrong answer")
+            print("Right Answer : " + i[7])
+            score = score - 0.25
+
+    print("\n>>>>>>>><<<<<<<<")
+    print('Final score=', score, '/15')
+    if score <= 0:
+        print("Final percentage : 0%")
+        print(">>>>>>>><<<<<<<<")
+    else:
+        v = (float(score)) * 100 / 15
+        b = round(v, 2)
+        print("Final percentage : " + str(b) + "%")
+        print(">>>>>>>><<<<<<<<")
 def con():
    print("\n\t\t\t\t\t\t\t\t\t>>>>>>>>>>>>>>><<<<<<<<<<<<<<")
    print('\n\t\t\t\t\t\t\t\t\t\t PRESS 1 Main Menu ')
@@ -121,6 +229,9 @@ def start(a):
     print("                                           press 1 C\n")
     print("                                           press 2 C++\n")
     print("                                           press 3 Java\n")
+    print("                                           press 4 Python\n")
+    print("                                           press 5 Php\n")
+    print("                                           press 6 JavaScript\n")
 
     a = int(input("Enter Your Subject : "))
 
@@ -134,6 +245,15 @@ def start(a):
         con()
     elif a==3:
         java()
+        con()
+    elif a==4:
+        python()
+        con()
+    elif a==5:
+        php()
+        con()
+    elif a==6:
+        javascript()
         con()
     else:
         print("Enter Right choice")
