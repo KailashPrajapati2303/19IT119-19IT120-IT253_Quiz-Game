@@ -147,7 +147,7 @@ def php():
     import mysql.connector
     xyz = mysql.connector.connect(host="localhost", user="savan", passwd="savan4141", database="savan")
     mycursor = xyz.cursor()
-    mycursor.execute("select * from java")
+    mycursor.execute("select * from php")
     for i in mycursor:
         print('\n>>>>>>>>><<<<<<<<<')
         print(i[0])
@@ -182,7 +182,7 @@ def javascript():
     import mysql.connector
     xyz = mysql.connector.connect(host="localhost", user="savan", passwd="savan4141", database="savan")
     mycursor = xyz.cursor()
-    mycursor.execute("select * from java")
+    mycursor.execute("select * from javascript")
     for i in mycursor:
         print('\n>>>>>>>>><<<<<<<<<')
         print(i[0])
